@@ -7,7 +7,37 @@
     
 </head>
 <body>
-    
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read status</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <button data-open-modal>Add new book</button>
+
+    <dialog data-modal>
+        <form method="dialog">
+            <label for="bname">Name:</label>
+            <input type="text" name="bname" id="bname">
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">Pages:</label>
+            <input type="text" name="pages" id="pages">
+            <label for="read">Read status:</label>
+            <input type="text" name="read" id="read">
+            <button type="submit">Submit</button>
+            <button data-close-modal>Cancel</button>
+        </form>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>
