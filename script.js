@@ -24,7 +24,7 @@ function loopTable(){
     for (let i = 0; i < myLibrary.length; i++){
         const table = document.getElementById("bookTable");
         console.log(myLibrary[i]);
-        row = table.insertRow(-1)
+        row = table.insertRow(-1);
         cell1 = row.insertCell(0);
         cell2 = row.insertCell(1);
         cell3 = row.insertCell(2);
@@ -32,12 +32,18 @@ function loopTable(){
         cell5 = row.insertCell(4);
         cell6 = row.insertCell(5);
 
+        let button = document.createElement("button")
+        button.innerText = "Remove"
+        button.className = "btn_rmv"
+
         cell1.textContent = `${myLibrary[i].name}`;
         cell2.textContent = `${myLibrary[i].author}`;
         cell3.textContent = `${myLibrary[i].pages}`;
         cell4.textContent = `${myLibrary[i].read}`;
         cell5.textContent = `${myLibrary[i].id}`;
-        cell6
+        cell6.appendChild(button);
+
+        button.addEventListener("click", () => {removeBook(button, myLibrary[i])})
     }
 }
 
@@ -58,5 +64,9 @@ submit.addEventListener("click", () => {
     loopTable();
 })
 
-
-
+function removeBook(button, index) {
+    button.parentNode.parentNode.remove();
+    console.log(index);
+    myLibrary.splice(index, 1);
+    console.log(`${JSON.stringify(myLibrary)}`);
+}
