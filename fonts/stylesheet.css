@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Tox Typewriter';
+    src: url('ToxTypewriter.woff2') format('woff2'),
+        url('ToxTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

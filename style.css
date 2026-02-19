@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Tox Typewriter';
+    src: url('fonts/ToxTypewriter.woff2') format('woff2'),
+        url('fonts/ToxTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.column1,
+.column2 {
+    width: 200px;
+}
+
+
+body {
+    font-family: "Tox Typewriter", sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    font-family: "Tox Typewriter", sans-serif;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(117, 117, 117);
+    color: white;
+    padding: .5em;
+}
+
+button:active {
+    background-color: rgb(58, 58, 58);
+}
