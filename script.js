@@ -91,8 +91,8 @@ function editStatus(id) {
     if (index !== -1) {
         myLibrary[index].read = editString.value;
     }
-    editString.value = "";
-
+    // editString.value = "";
+    console.log(myLibrary.length);
     loopTable();
 })
 }
